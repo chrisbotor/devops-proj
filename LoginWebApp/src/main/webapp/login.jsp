@@ -1,9 +1,9 @@
 <%@ page import="java.sql.*"%>
 <%
-    String userName = request.getParameter("uname");    
+    String userName = request.getParameter("userName");    
     String password = request.getParameter("password");
     
-    if (userName != null && password.equals("qwertyuiop"))   {
+    if (userName != null && !userName.equals("") && password.equals("qwertyuiop"))   {
         session.setAttribute("userid", userName);
         response.sendRedirect("success.jsp");
     } else {
