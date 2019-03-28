@@ -2,7 +2,10 @@
 <%
     String userName = request.getParameter("uname");    
     String password = request.getParameter("password");
-    Class.forName("com.mysql.jdbc.Driver");
+    
+    response.sendRedirect("success.jsp");
+    
+     <%-- Class.forName("com.mysql.jdbc.Driver");
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jwt",
             "root", "mukesh");
     Statement st = con.createStatement();
@@ -13,5 +16,6 @@
         response.sendRedirect("success.jsp");
     } else {
         out.println("Invalid password <a href='index.jsp'>try again</a>");
-    }
+    }--%>
+    
 %>
