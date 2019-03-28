@@ -1,9 +1,11 @@
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.annotations.Test;
 
 public class Login {
 	
+	@Test
 	FirefoxBinary firefoxBinary = new FirefoxBinary();
 	firefoxBinary.addCommandLineOptions("-headless");
 	System.setProperty("webdriver.gecko.driver","/opt/geckodriver");
