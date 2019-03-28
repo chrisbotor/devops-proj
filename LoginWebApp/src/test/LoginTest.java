@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 public class LoginTest {
 	
-	public static void main(String[] args) throws Exception {
 	
 		@Test
 		FirefoxBinary firefoxBinary = new FirefoxBinary();
@@ -25,7 +24,6 @@ public class LoginTest {
 		driver.findElement(By.Name("password")).sendkeys(password);
 		driver.findElement(By.Value("Login")).click();
 	
-	}
 	
 
 }
