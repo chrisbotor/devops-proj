@@ -31,7 +31,7 @@
 	</dependencies>
 	<build>
 		<finalName>LoginWebApp</finalName>
-	    <testSourceDirectory>LoginWebApp/src/test</testSourceDirectory>
+	    <testSourceDirectory>LoginWebApp/src/test/resources</testSourceDirectory>
 		<plugins>	
       <plugin>
            <groupId>org.apache.maven.plugins</groupId>
