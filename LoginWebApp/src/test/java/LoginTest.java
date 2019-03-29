@@ -27,7 +27,7 @@ public class LoginTest {
 	 public void CorrectLogin()  {
 		 
 		 driver = getDriver();
-		 driver.get("http://http://209.97.174.206:8090/LoginWebApp/");
+		 driver.get("http://209.97.174.206:8090/LoginWebApp/");
 			
 			
 		String username = "admin";
