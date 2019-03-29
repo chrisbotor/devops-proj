@@ -48,7 +48,7 @@ public class LoginTest {
 		 driver.get("http://209.97.174.206:8090/LoginWebApp/");
 			
 			
-		String username = "admin";
+		String username = "user";
 		String password = "1234567890";
 					
 		driver.findElement(By.name("userName")).sendKeys(username);
