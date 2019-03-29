@@ -37,7 +37,8 @@ public class LoginTest {
 		driver.findElement(By.name("password")).sendKeys(password);
 		//driver.findElement(By.xpath("value=Login")).click();
 		//driver.findElement(By.xpath("//button[@type='submit']")).click();
-		 driver.findElements(By.xpath("//button[@type='submit']"));
+		 //driver.findElements(By.xpath("//button[@type='submit']"));
+		 driver.findElement(By.xpath(".//button[@class='btn btn__primary'][@type='submit']")).click();
 	 }
 	
 		/*
