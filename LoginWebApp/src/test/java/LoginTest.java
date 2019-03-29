@@ -54,7 +54,7 @@ public class LoginTest {
 		driver.findElement(By.name("userName")).sendKeys(username);
 		driver.findElement(By.name("password")).sendKeys(password);
 		driver.findElement(By.xpath(".//input[@value='Login' and @type='submit']")).click();
-		Assert.assertTrue(password.equals("qwertyuiop"));
+		Assert.assertFalse(password.equals("qwertyuiop"));
 		
 	 }
 	
