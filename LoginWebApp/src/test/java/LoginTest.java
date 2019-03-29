@@ -36,6 +36,7 @@ public class LoginTest {
 		driver.findElement(By.name("userName")).sendKeys(username);
 		driver.findElement(By.name("password")).sendKeys(password);
 		//driver.findElement(By.xpath("value=Login")).click();
+		driver.findElement(By.xpath("//button[@type='submit']")).click();;
 	 }
 	
 		/*
