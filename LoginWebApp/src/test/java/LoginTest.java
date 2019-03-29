@@ -2,11 +2,16 @@ import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.Test;
+import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
 
 public class LoginTest {
 	
 	
-		@Test
+		//@Test
+		/*
 		FirefoxBinary firefoxBinary = new FirefoxBinary();
 		firefoxBinary.addCommandLineOptions("-headless");
 		System.setProperty("webdriver.gecko.driver","/opt/geckodriver");
@@ -23,7 +28,7 @@ public class LoginTest {
 		driver.findElement(By.Name("userName")).sendkeys(username);
 		driver.findElement(By.Name("password")).sendkeys(password);
 		driver.findElement(By.Value("Login")).click();
-	
+		*/
 	
 
 }
