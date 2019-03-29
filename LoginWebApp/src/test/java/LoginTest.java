@@ -1,20 +1,45 @@
-import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.Test;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.annotations.Test;
-import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.openqa.selenium.firefox.FirefoxBinary;
 
 public class LoginTest {
 	
+	public WebDriver driver;
+		
+	public static WebDriver getDriver() {
+    	
+    	FirefoxBinary firefoxBinary = new FirefoxBinary();
+    	firefoxBinary.addCommandLineOptions("-headless");
+    	System.setProperty("webdriver.gecko.driver","/opt/geckodriver");
+    	FirefoxOptions fo = new FirefoxOptions();
+    	fo.setBinary(firefoxBinary);
+    	FirefoxDriver driver=new FirefoxDriver(fo);
+    
+    	return driver;
+    }
+		
+	 @Test
+	 public void CorrectLogin()  {
+		 
+		 driver = getDriver();
+		 driver.get("http://http://209.97.174.206:8090/LoginWebApp/");
+			
+			
+		String username = "admin";
+		String password = "qwertyuiop";
+					
+		driver.findElement(By.name("userName")).sendKeys(username);
+		driver.findElement(By.name("password")).sendKeys(password);
+		driver.findElement(By.xpath("//input[@value=Login]")).click();
+	 }
 	
-		//@Test
 		/*
-		FirefoxBinary firefoxBinary = new FirefoxBinary();
-		firefoxBinary.addCommandLineOptions("-headless");
-		System.setProperty("webdriver.gecko.driver","/opt/geckodriver");
+		 System.setProperty("webdriver.gecko.driver","/opt/geckodriver");
 		FirefoxOptions fo = new FirefoxOptions();
 		fo.setBinary(firefoxBinary);
 		FirefoxDriver driver=new FirefoxDriver(fo);
