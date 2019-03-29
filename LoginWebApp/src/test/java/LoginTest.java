@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxBinary;
@@ -36,6 +37,8 @@ public class LoginTest {
 		driver.findElement(By.name("userName")).sendKeys(username);
 		driver.findElement(By.name("password")).sendKeys(password);
 		driver.findElement(By.xpath(".//input[@value='Login' and @type='submit']")).click();
+		Assert.assertTrue(password.equals("qwertyuiop"));
+		
 	 }
 	
 		/*
