@@ -3,7 +3,7 @@
     String userName = request.getParameter("userName");    
     String password = request.getParameter("password");
     
-    if (userName != null && !userName.equals("") && password.equals("qwertyuiop1"))   {
+    if (userName != null && !userName.equals("") && password.equals("12345"))   {
         session.setAttribute("userid", userName);
         response.sendRedirect("success.jsp");
     } else {
